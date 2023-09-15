@@ -5,10 +5,6 @@
     list-style: none;
 }
 
-body{
-
-}
-
 :root{
     --color-primary: #191d2b;
     --color-secondary: #27ae60;
@@ -30,23 +26,15 @@ body{
     font-family: 'Poppins', sans-serif;
     font-size: 1.1rem;
     color: var(--color-white);
-    overflow: hidden;
+    // overflow: hidden;
     transition: all .4s ease-in-out;
 }
+
 a{
     display: inline-block;
     text-decoration: none;
     color: inherit;
     font-family: inherit;
-}
-
-section{
-    min-height: 100vh;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    padding: 3rem 18rem;
 }
 
 header{
@@ -55,6 +43,14 @@ header{
     overflow: hidden;
 }
 
+section {
+    min-height: 100vh;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 3rem 18rem;
+}
 .section{
     transform: translateY(-100%) scale(0);
     transition: all .4s ease-in-out;
@@ -62,34 +58,42 @@ header{
 }
 
 .sec1{
-    display: none;
+    display:none;
     transform: translateY(0) scale(1);
     background-color: slateblue;
 }
 
 .sec2{
-    display: none;
+    display:none;
     transform: translateY(0) scale(1);
-    background-color: lightcoral;
+    background-color: brown;
 }
 
 .sec3{
-    display: none;
+    display:none;
     transform: translateY(0) scale(1);
-    background-color: coral;
+    background-color: yellow;
 }
-
 .sec4{
-    display: none;
+    display:none;
     transform: translateY(0) scale(1);
-    background-color: maroon;
+    background-color: blue;
 }
 
-// .active{
-//     display: block;
-// }
+.active{
+    display: block;
+    animation: scaleAnim 1s ease-in-out;
+    @keyframes scaleAnim {
+        0%{
+            transform: translateY(-100%) scaley(0)
+        }
+        100%{
+            transform: translateY(0) scaley(1)
+        }
+    }
+}
 
-// controlls
+//Controlls
 .controlls{
     position: fixed;
     z-index: 10;
@@ -106,7 +110,6 @@ header{
         i{
             color: var(--color-white) !important;
         }
-
     }
     .control{
         padding: 1rem;
@@ -119,11 +122,13 @@ header{
         justify-content:center;
         align-items: center;
         margin: .7rem 0;  
-        box-shadow: var(--box-shadow-1);  
+        box-shadow: var(--box-shadow-1); 
         i{
             font-size: 1.2rem;
             color: var(--color-grey-2);
             pointer-events: none;
         } 
     }
+
 }
+

@@ -26,7 +26,6 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 1.1rem;
   color: var(--color-white);
-  overflow: hidden;
   transition: all 0.4s ease-in-out;
 }
 
@@ -37,6 +36,12 @@ a {
   font-family: inherit;
 }
 
+header {
+  height: 100vh;
+  color: var(--color-white);
+  overflow: hidden;
+}
+
 section {
   min-height: 100vh;
   width: 100%;
@@ -44,12 +49,6 @@ section {
   left: 0;
   top: 0;
   padding: 3rem 18rem;
-}
-
-header {
-  height: 100vh;
-  color: var(--color-white);
-  overflow: hidden;
 }
 
 .section {
@@ -67,19 +66,32 @@ header {
 .sec2 {
   display: none;
   transform: translateY(0) scale(1);
-  background-color: lightcoral;
+  background-color: brown;
 }
 
 .sec3 {
   display: none;
   transform: translateY(0) scale(1);
-  background-color: coral;
+  background-color: yellow;
 }
 
 .sec4 {
   display: none;
   transform: translateY(0) scale(1);
-  background-color: maroon;
+  background-color: blue;
+}
+
+.active {
+  display: block;
+  animation: scaleAnim 1s ease-in-out;
+}
+@keyframes scaleAnim {
+  0% {
+    transform: translateY(-100%) scaley(0);
+  }
+  100% {
+    transform: translateY(0) scaley(1);
+  }
 }
 
 .controlls {
