@@ -227,7 +227,7 @@ section {
 /*About*/
 .about-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   padding-top: 3.5rem;
   padding-bottom: 5rem;
 }
@@ -278,6 +278,19 @@ section {
   padding-right: 5rem;
 }
 .about-container .left-about p {
+  text-align: center;
+  line-height: 2rem;
+  padding: 1rem;
+  color: var(--color-grey-1);
+}
+.about-container .left-about p1 {
+  text-align: center;
+  line-height: 2rem;
+  padding: 1rem;
+  color: var(--color-grey-1);
+}
+.about-container .left-about p2 {
+  text-align: center;
   line-height: 2rem;
   padding: 1rem;
   color: var(--color-grey-1);
